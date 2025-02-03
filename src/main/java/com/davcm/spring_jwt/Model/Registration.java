@@ -14,6 +14,11 @@ import java.time.LocalTime;
 import java.util.Base64;
 
 
+
+//FetchType.EAGER
+//
+//    Descripción: Cuando una entidad se carga, todas las asociaciones marcadas con FetchType.EAGER se cargan inmediatamente junto con la entidad principal.
+//
 @Data
 @Builder
 @AllArgsConstructor
@@ -48,11 +53,6 @@ public class Registration implements Serializable {
     private Boolean scan = false;
     private String aprobado = "ESPERA";
 }
-
-//FetchType.EAGER
-//
-//    Descripción: Cuando una entidad se carga, todas las asociaciones marcadas con FetchType.EAGER se cargan inmediatamente junto con la entidad principal.
-//
 //    Uso: Útil cuando necesitas que las asociaciones estén disponibles de inmediato y no quieres realizar consultas adicionales.
 
 //FetchType.LAZY

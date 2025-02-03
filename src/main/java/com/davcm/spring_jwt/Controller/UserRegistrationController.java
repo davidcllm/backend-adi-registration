@@ -75,7 +75,7 @@ public class UserRegistrationController {
         if(file.isEmpty()) {
             return new ResponseEntity<>("Archivo no subido", HttpStatus.BAD_REQUEST);
         }
-        if(file.getSize() > 358400) {
+        if(file.getSize() > 1048576) {
             return new ResponseEntity<>("El archivo excede el límite de 350 KB", HttpStatus.BAD_REQUEST);
         }
 

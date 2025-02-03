@@ -20,10 +20,16 @@ public class TotalService {
     private final TotalRepository totalRepository;
     private final JwtService jwtService;
     private final UserRepository userRepository;
-    public Page<Total> findAllTotals(Pageable pageable) {
+    public Page<Total> findAllTotals(String searchKey, Pageable pageable) {
         Sort sort = Sort.by(Sort.Order.asc("user"));
         Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
-        return totalRepository.findAll(sortedPageable);
+
+        if (searchKey != null && !searchKey.trim().isEmpty()) {
+            return totalRepository.findBySearchKey(searchKey, sortedPageable);
+        }
+        else {
+            return totalRepository.findAll(sortedPageable);
+        }
     }
     public Total findTotalByUserId(String token) {
         String usernameFromToken = jwtService.getUsernameFromToken(token);

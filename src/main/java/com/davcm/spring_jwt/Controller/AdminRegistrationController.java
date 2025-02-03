@@ -27,9 +27,10 @@ public class AdminRegistrationController {
     @GetMapping("/all")
     public ResponseEntity<PagedModel<EntityModel<RegistrationProjection>>> getRegistrations(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String searchKey) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<RegistrationProjection> registrations = registrationService.findAllRegistrations(pageable);
+        Page<RegistrationProjection> registrations = registrationService.findAllRegistrations(searchKey, pageable);
         PagedModel<EntityModel<RegistrationProjection>> pagedModel = pagedResourcesAssembler.toModel(registrations);
 
         return new ResponseEntity<>(pagedModel, HttpStatus.OK);

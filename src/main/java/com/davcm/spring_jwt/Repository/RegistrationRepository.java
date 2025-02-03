@@ -26,6 +26,15 @@ public interface RegistrationRepository extends JpaRepository<Registration, Long
     Page<RegistrationProjection> findAllProjectedBy(Pageable pageable);
     //Page<Registration> findAll(Pageable pageable);
 
+    @Query("""
+        SELECT r FROM Registration r
+        WHERE
+            LOWER(r.event.eventName) LIKE LOWER(CONCAT('%', :searchKey, '%')) 
+            OR LOWER(r.aprobado) LIKE LOWER(CONCAT('%', :searchKey, '%'))
+            OR CAST(r.user.id AS string) LIKE CONCAT('%', :searchKey, '%')
+    """)
+    Page<RegistrationProjection> findBySearchKey(@Param("searchKey") String searchKey, Pageable pageable);
+
     @Query("SELECT r.photos FROM Registration r WHERE r.id = :id")
     Optional<String> findPhotoBy_Id(@Param("id") Long id);
 

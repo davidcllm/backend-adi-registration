@@ -38,9 +38,10 @@ public class UserEventController {
     @GetMapping("/all")
     public ResponseEntity<PagedModel<EntityModel<Event>>> getAllEvents(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String searchKey) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Event> events = eventService.findAllEvents(pageable);
+        Page<Event> events = eventService.findAllEvents(searchKey, pageable);
         PagedModel<EntityModel<Event>> pagedModel = pagedResourcesAssembler.toModel(events);
 
         return new ResponseEntity<>(pagedModel, HttpStatus.OK);

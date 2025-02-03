@@ -31,9 +31,10 @@ public class AdminTotalController {
     @GetMapping("/all")
     public ResponseEntity<PagedModel<EntityModel<Total>>> getAllTotals(
             @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(required = false) String searchKey) {
         Pageable pageable = PageRequest.of(page, size);
-        Page<Total> totals = totalService.findAllTotals(pageable);
+        Page<Total> totals = totalService.findAllTotals(searchKey, pageable);
         PagedModel<EntityModel<Total>> pagedModel = pagedResourcesAssembler.toModel(totals);
 
         return new ResponseEntity<>(pagedModel, HttpStatus.OK);

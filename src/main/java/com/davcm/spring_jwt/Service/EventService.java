@@ -21,11 +21,16 @@ public class EventService {
     private final RegistrationRepository registrationRepository;
 
     @Transactional(readOnly = true)
-    public Page<Event> findAllEvents(Pageable pageable) {
+    public Page<Event> findAllEvents(String searchKey, Pageable pageable) {
         Sort sort = Sort.by(Sort.Order.desc("fecha"));
         Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
 
-        return eventRepository.findAll(sortedPageable);
+        if (searchKey != null && !searchKey.trim().isEmpty()) {
+            return eventRepository.findBySearchKey(searchKey, sortedPageable);
+        }
+        else {
+            return eventRepository.findAll(sortedPageable);
+        }
     }
     public Event addEvent(Event event) {
         validateDate(event);

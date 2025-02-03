@@ -124,9 +124,9 @@ public class RegistrationService {
             throw new RuntimeException("El regsitro no se encuentra en estado de ESPERA");
         }
 
-        if(!registration.getScan()) {
+        /*if(!registration.getScan()) {
             throw new RuntimeException("El código QR aún no ha sido escaneado");
-        }
+        }*/
 
         if(registration.getPhotos() != null && !registration.getPhotos().isEmpty()) {
             throw new RuntimeException("Ya hay una foto subida para este registro");
@@ -142,10 +142,16 @@ public class RegistrationService {
     }
 
     @Transactional(readOnly = true)
-    public Page<RegistrationProjection> findAllRegistrations(Pageable pageable) {
+    public Page<RegistrationProjection> findAllRegistrations(String searchKey, Pageable pageable) {
         Sort sort = Sort.by(Sort.Order.asc("user"));
         Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
-        return registrationRepository.findAllProjectedBy(sortedPageable);
+
+        if (searchKey != null && !searchKey.trim().isEmpty()) {
+            return registrationRepository.findBySearchKey(searchKey, sortedPageable);
+        }
+        else {
+            return registrationRepository.findAllProjectedBy(sortedPageable);
+        }
     }
 
     @Transactional(readOnly = true)
