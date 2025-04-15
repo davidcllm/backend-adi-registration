@@ -170,15 +170,15 @@ public class RegistrationService {
         Registration registration = registrationRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Registro no encontrado con id:" + id));
 
-        if(!"ESPERA".equals(registration.getAprobado())) {
+        /*if(!"ESPERA".equals(registration.getAprobado())) {
             throw new RuntimeException("El registro ya no se encuentra en estado de ESPERA");
-        }
+        }*/
 
         /*if(!registration.getScan()) {
             throw new RuntimeException("El código qr aún no ha sido escaneado");
         }*/
 
-        if("APROBADO".equals(status)) {
+        if("ESPERA".equals(registration.getAprobado()) && "APROBADO".equals(status)) {
             //registration.setPhotos(null);
             String eventType = registration.getEvent().getTipo();
             Long userId = registration.getUser().getId();
@@ -203,9 +203,10 @@ public class RegistrationService {
                     break;
             }
             total.setTotalEvents(total.getTotalEvents() + 1);
+            registration.setAprobado(status);
             totalRepository.save(total);
         }
-        else if("PENALIZADO".equals(status)) {
+        else if("ESPERA".equals(registration.getAprobado()) && "PENALIZADO".equals(status)) {
             //registration.setPhotos(null);
             Long userId = registration.getUser().getId();
             Total total = totalRepository.findByUserId(userId)
@@ -213,10 +214,24 @@ public class RegistrationService {
 
             total.setTotalEvents(total.getTotalEvents() - 1);
             total.setPenalty(total.getPenalty() + 1);
+            registration.setAprobado(status);
             totalRepository.save(total);
         }
+        else if("PENALIZADO".equals(registration.getAprobado()) && "APROBADO".equals(status)) {
+            Long userId = registration.getUser().getId();
+            Total total = totalRepository.findByUserId(userId)
+                    .orElseThrow(() -> new RuntimeException("Total no encontrado para el usuario con id: " + id));
 
-        registration.setAprobado(status);
+            registration.setPhotos(null);
+            registration.setAprobado("ESPERA");
+            total.setTotalEvents(total.getTotalEvents() + 1);
+            total.setPenalty(total.getPenalty() - 1);
+            totalRepository.save(total);
+        }
+        else {
+            throw new RuntimeException("Error al intentar cambiar el estado de aprobación.");
+        }
+
         registrationRepository.save(registration);
     }
 

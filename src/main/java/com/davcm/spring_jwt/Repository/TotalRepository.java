@@ -19,7 +19,7 @@ public interface TotalRepository extends JpaRepository<Total, Long> {
         SELECT t FROM Total t
         WHERE 
             CAST(t.user.id AS string) LIKE CONCAT('%', :searchKey, '%')
-            OR LOWER(t.user.career) LIKE LOWER(CONCAT('%', :searchKey, '%'))
+            OR LOWER(t.user.carrera) LIKE LOWER(CONCAT('%', :searchKey, '%'))
             OR LOWER(t.user.username) LIKE LOWER(CONCAT('%', :searchKey, '%'))
     """)
     Page<Total> findBySearchKey(@Param("searchKey") String searchKey, Pageable pageable);
