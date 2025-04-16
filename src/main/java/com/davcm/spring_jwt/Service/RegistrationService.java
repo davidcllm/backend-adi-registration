@@ -16,6 +16,7 @@ import com.oracle.bmc.objectstorage.requests.PutObjectRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cglib.core.Local;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -26,6 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.InputStream;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
@@ -51,9 +53,11 @@ public class RegistrationService {
         Event event = eventRepository.findById(eventId)
             .orElseThrow(() -> new RuntimeException("Evento no encontrado"));
 
-        LocalDate today = LocalDate.now();
-        if(event.getFecha().isBefore(today)) {
-            throw new RuntimeException("El evento ya ha pasado");
+        //LocalDate today = LocalDate.now();
+        LocalDateTime eventDateTime = LocalDateTime.of(event.getFecha(), event.getHora());
+        LocalDateTime now = LocalDateTime.now();
+        if(now.isAfter(eventDateTime.minusMinutes(40))) {
+            throw new RuntimeException("Ya no se puede registrar, el evento empieza en 40 minutos");
         }
 
         Optional<Registration> existingRegistration = registrationRepository.findByUserAndEvent(user, event);
@@ -217,6 +221,7 @@ public class RegistrationService {
             registration.setAprobado(status);
             totalRepository.save(total);
         }
+        // Quitar penalizado
         else if("PENALIZADO".equals(registration.getAprobado()) && "APROBADO".equals(status)) {
             Long userId = registration.getUser().getId();
             Total total = totalRepository.findByUserId(userId)
@@ -226,6 +231,36 @@ public class RegistrationService {
             registration.setAprobado("ESPERA");
             total.setTotalEvents(total.getTotalEvents() + 1);
             total.setPenalty(total.getPenalty() - 1);
+            totalRepository.save(total);
+        }
+        //Quitar aprobado
+        else if("APROBADO".equals(registration.getAprobado()) && "PENALIZADO".equals(status)) {
+            String eventType = registration.getEvent().getTipo();
+            Long userId = registration.getUser().getId();
+            Total total = totalRepository.findByUserId(userId)
+                    .orElseThrow(() -> new RuntimeException("Total no encontrado para el usuario con id: " + id));
+
+            switch(eventType) {
+                case "ACADÉMICA":
+                    total.setAcademicEvents(total.getAcademicEvents() - 1);
+                    break;
+                case "ASUA":
+                    total.setAsuaEvents(total.getAsuaEvents() - 1);
+                    break;
+                case "CULTURAL":
+                    total.setCulturalEvents(total.getCulturalEvents() - 1);
+                    break;
+                case "SOCIEDAD":
+                    total.setSociedadEvents(total.getSociedadEvents() - 1);
+                    break;
+                case "DEPORTIVA":
+                    total.setSportEvents(total.getSportEvents() - 1);
+                    break;
+            }
+
+            registration.setPhotos(null);
+            registration.setAprobado("ESPERA");
+            total.setTotalEvents(total.getTotalEvents() - 1);
             totalRepository.save(total);
         }
         else {
