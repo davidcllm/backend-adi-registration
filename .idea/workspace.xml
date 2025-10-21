@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e5ca2bb-04a0-49c5-92ed-9bef37fc12fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/OsClientConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminRegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminScanController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminTotalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/DemoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserEventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserRegistrationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserTotalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/QrModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Registration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Total.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/RegistrationProjection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/UserProjection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/EventRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/RegistrationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/TotalRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/Base64Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/EventService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/FileUploadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/QrService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/RegistrationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/TotalService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/SpringJwtApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/davcm/spring_jwt/SpringJwtApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="34Ob8bZoZxySlacpVAWcQxes96i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/davcm/Documents/GitHub/bagroBack/src/main"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\davcm\Documents\GitHub\bagroBack\src\main" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e5ca2bb-04a0-49c5-92ed-9bef37fc12fa" name="Changes" comment="" />
+      <created>1761087406797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761087406797</updated>
+    </task>
+    <servers />
+  </component>
+</project>
