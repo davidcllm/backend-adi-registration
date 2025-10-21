@@ -4,61 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e5ca2bb-04a0-49c5-92ed-9bef37fc12fa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/AuthResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/LoginRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/RegisterRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/ApplicationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/OsClientConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminEventController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminRegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminScanController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminTotalController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/DemoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserEventController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserRegistrationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserTotalController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/QrModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Registration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Total.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/RegistrationProjection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/UserProjection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/EventRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/RegistrationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/TotalRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/Base64Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/EventService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/FileUploadService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/QrService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/RegistrationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/TotalService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/SpringJwtApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/davcm/spring_jwt/SpringJwtApplicationTests.java" beforeDir="false" />
+    <list default="true" id="ccb93ef8-3c32-413e-b10e-d7350c198f1e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/RegistrationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/config" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/david.ceballos24@anahuac.mx_2024-08-17T00_35_28.291Z.pem" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/AuthResponse.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/LoginRequest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Auth/RegisterRequest.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/ApplicationConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/OsClientConfiguration.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/SecurityConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Config/WebConfig.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminEventController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminRegistrationController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminScanController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AdminTotalController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/AuthController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/DemoController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserEventController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserRegistrationController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Controller/UserTotalController.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtAuthenticationFilter.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Jwt/JwtService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Event.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/QrModel.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Registration.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Role.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/Total.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Model/User.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/RegistrationProjection.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Projection/UserProjection.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/EventRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/RegistrationRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/TotalRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Repository/UserRepository.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/AuthService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/Base64Service.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/EventService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/FileUploadService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/QrService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/RegistrationService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/TotalService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/Service/UserService.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/davcm/spring_jwt/SpringJwtApplication.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.properties" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -67,31 +80,76 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
-  <component name="ProjectId" id="34Ob8bZoZxySlacpVAWcQxes96i" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2iNstR9MT3vDnPicdYWZHaieaQl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.SpringJwtApplication.executor": "Run",
+    "Maven.spring-jwt [package].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/davcm/Documents/GitHub/bagroBack/src/main"
+    "last_opened_file_path": "C:/Users/davcm/Documents/GitHub/bagroBack",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\davcm\Documents\GitHub\bagroBack\src\main" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.davcm.spring_jwt.Auth" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\davcm\spring-jwt\spring-jwt" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\davcm\spring-jwt\spring-jwt" />
+      <recent name="C:\Users\davcm\spring-jwt\spring-jwt\src\main\resources" />
+      <recent name="C:\Users\davcm\spring-jwt\spring-jwt\src\main\java\com\davcm\spring_jwt\Config" />
+      <recent name="C:\Users\davcm\spring-jwt\spring-jwt\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringJwtApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="BUCKET_NAME" value="bucket-20240817-ujy4z7-xkq9-lt6p-4r2v8-sf9y3k-adi" />
+        <env name="NAMESPACE" value="axaqwplngpdg" />
+        <env name="SECRET_KEY_VALUE" value="e287a3a2abbdf80357147ea1b7e767e55e207c1727fcd0c73cf615e00b8e58f0" />
+        <env name="SPRING_DATASOURCE_PASSWORD" value="G7k#3xV@d9!NmLqz" />
+        <env name="SPRING_DATASOURCE_URL" value="jdbc:postgresql://localhost:5432/securitydb" />
+        <env name="SPRING_DATASOURCE_USERNAME" value="postgres" />
+        <env name="USER" value="ocid1.user.oc1..aaaaaaaauhhflgv5h5bgpevpneqwvl242qbnytj3xe4lpls7qvs6termnvrq" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.davcm.spring_jwt.SpringJwtApplication" />
+      <module name="spring-jwt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.davcm.spring_jwt.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpringJwtApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -99,12 +157,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8e5ca2bb-04a0-49c5-92ed-9bef37fc12fa" name="Changes" comment="" />
-      <created>1761087406797</created>
+      <changelist id="ccb93ef8-3c32-413e-b10e-d7350c198f1e" name="Changes" comment="" />
+      <created>1719342584984</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1761087406797</updated>
+      <updated>1719342584984</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.id.IdentifierGenerationException" package="org.hibernate.id" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
